@@ -29,7 +29,7 @@ test_data = test_gen.flow_from_directory('Data/Validation', target_size=(64, 64)
 model.fit_generator(train_data, steps_per_epoch=493, epochs=2, validation_data=test_data, validation_steps=165)
 
 #Predict
-img_pred = image.load_img('Data/Pred/4.jpg' ,target_size = (64,64))
+img_pred = image.load_img('Data/Pred/5.jpg' ,target_size = (64,64))
 img_ped = image.img_to_array(img_pred)
 img_pred = np.expand_dims(img_pred, axis=0)
 predict = model.predict(img_pred)
